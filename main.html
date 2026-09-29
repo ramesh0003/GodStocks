@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GodStocks: AI Trading Signals & Market Analysis</title>
+<meta name="description" content="Trade smarter with GodStocks. AI trading signals, live Forex, Nifty, Gold analysis and a transparent public track record.">
+<link rel="canonical" href="https://godstockss.in/">
+<meta property="og:title" content="GodStocks: AI Trading Signals & Market Analysis">
+<meta property="og:image" content="https://godstockss.in/favicon.png">
+<meta name="theme-color" content="#0B1B2B">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="favicon.png?v=2" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PYDQC33GYN"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-PYDQC33GYN');</script>
+<!-- No fake aggregateRating: add it back only when it matches real, verifiable reviews -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"GodStocks Terminal","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who is the founder of GodStocks?","acceptedAnswer":{"@type":"Answer","text":"Chirag Bhavnani is the founder, CEO, and lead analyst of GodStocks."}}]}</script>
+<style>
+:root{--fh:'Sora','Inter',sans-serif;--gold:#0D7C86;--cyan:#0D7C86;--green:#12A150;--red:#E5484D;--bg:#F4F7F9;--card:#FFFFFF;--border:#DDE3EE;--text:#1F2937;--muted:#5B6678;--orange:#F0A030}
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth;scroll-padding-top:110px}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;overflow-x:hidden}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--gold);color:#fff;padding:.6rem 1rem;z-index:99999}
+.skip:focus{left:0}
+h1,h2,h3{font-family:'Inter',sans-serif;line-height:1.25;font-weight:800;color:#1B1B3A}
+.grad{background:none;-webkit-text-fill-color:currentColor;color:#1B1B3A}
+.strip{position:sticky;top:0;z-index:1000;background:var(--gold);color:#fff;display:flex;gap:1.6rem;overflow-x:auto;padding:.4rem 1.25rem;font-size:.78rem;font-weight:600;white-space:nowrap;scrollbar-width:none}
+.strip span b{color:#9AF0C0;margin-left:.4rem}.strip .g b{color:#FFD98A}
+nav{position:sticky;top:31px;z-index:999;background:#fff;box-shadow:0 2px 10px rgba(20,20,60,.08);display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 1.25rem;flex-wrap:wrap}
+.logo{font-weight:800;font-size:1.5rem;letter-spacing:1px;text-decoration:none;color:#1B1B3A}
+.logo i{color:var(--gold);font-style:normal}
+.links{display:flex;gap:1.3rem;align-items:center;flex-wrap:wrap}
+.links a{color:#1F2937;text-decoration:none;font-weight:600;font-size:.95rem}
+.links a:hover{color:var(--gold)}
+.links .hot{color:#fff;background:var(--gold);padding:.35rem .9rem;border-radius:6px;font-size:.8rem}
+.links .hot:hover{color:#fff;background:#0A636B}
+select,button,input{font:inherit}
+select{background:#fff;color:var(--text);border:1px solid var(--border);border-radius:6px;padding:.3rem .5rem}
+section{padding:3.5rem 1.25rem;max-width:1100px;margin:0 auto}
+.tag{display:inline-block;font-size:.72rem;letter-spacing:2px;color:var(--gold);background:#E3F4F5;padding:.25rem .9rem;border-radius:20px;margin-bottom:.8rem;text-transform:uppercase;font-weight:700}
+.center{text-align:center}
+h2{font-size:clamp(1.4rem,3vw,2.1rem);margin-bottom:.6rem}
+.sub{color:var(--muted);max-width:640px;margin:0 auto 2rem}
+.hero{text-align:center;padding:4rem 1.25rem 3rem;background:#fff;border-bottom:1px solid var(--border)}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);margin:1rem 0}
+.hero p{color:var(--muted);font-size:1.15rem;max-width:620px;margin:0 auto 1.5rem}
+.badge{display:inline-flex;gap:.5rem;align-items:center;font-size:.75rem;letter-spacing:1.5px;color:var(--gold);background:#E3F4F5;border-radius:50px;padding:.3rem 1rem;font-weight:700}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
+.btn{display:inline-block;padding:.85rem 1.8rem;border-radius:8px;font-weight:700;font-size:.85rem;letter-spacing:.5px;text-decoration:none;cursor:pointer;border:1.5px solid var(--gold);background:#fff;color:var(--gold);margin:.3rem}
+.btn:hover{background:#E3F4F5}
+.btn.main{background:var(--gold);color:#fff}
+.btn.main:hover{background:#0A636B}
+.ticker{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;background:#fff;border:1px solid var(--border);border-radius:12px;padding:1rem 2rem;margin:1.5rem auto;max-width:800px;box-shadow:0 2px 8px rgba(20,20,60,.06)}
+.ticker div{text-align:center}.ticker b{display:block;font-size:1.25rem;color:var(--gold)}
+.ticker small{color:var(--muted);letter-spacing:1.5px;font-size:.68rem;font-weight:600}
+.note{background:#FFF7E6;border:1px solid #F5C26B;border-radius:10px;padding:1rem;max-width:800px;margin:1.5rem auto 0;font-size:.92rem;color:#5A4308}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.card{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:10px;padding:1.5rem;position:relative;box-shadow:0 1px 4px rgba(20,20,60,.06)}
+.card::after{content:'';position:absolute;top:0;right:0;width:18px;height:18px;background:var(--gold);clip-path:polygon(0 0,100% 0,100% 100%)}
+.grid .card:nth-child(4n+2){border-left-color:var(--green)}.grid .card:nth-child(4n+2)::after{background:var(--green)}
+.grid .card:nth-child(4n+3){border-left-color:var(--red)}.grid .card:nth-child(4n+3)::after{background:var(--red)}
+.grid .card:nth-child(4n){border-left-color:var(--orange)}.grid .card:nth-child(4n)::after{background:var(--orange)}
+.card h3{font-size:.95rem;color:var(--gold);margin:.5rem 0}
+.card p{color:var(--muted);font-size:.95rem}
+.ico{font-size:1.8rem}
+abbr[tabindex]{text-decoration:underline dotted var(--gold);cursor:help;position:relative}
+abbr[tabindex]:focus::after,abbr[tabindex]:hover::after{content:attr(data-tip);position:absolute;left:0;top:100%;z-index:50;width:230px;background:#fff;border:1px solid var(--gold);color:var(--text);padding:.5rem .7rem;border-radius:8px;font-size:.8rem;text-decoration:none;box-shadow:0 6px 18px rgba(20,20,60,.15)}
+.wrap{overflow-x:auto;background:#fff;border-radius:10px;border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th{font-size:.72rem;letter-spacing:1px;color:#fff;background:var(--gold);text-align:left;padding:.8rem .7rem;font-weight:600}
+td{padding:.75rem .7rem;border-bottom:1px solid #EDF0F6}
+.pos{color:var(--green);font-weight:700}.neg{color:var(--red);font-weight:700}
+.pill{padding:.15rem .6rem;border-radius:6px;font-size:.75rem;font-weight:700}
+.buy{background:#E3F6EC;color:var(--green)}.sell{background:#FDE7E7;color:var(--red)}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0;align-items:center}
+.tabs button{background:#fff;color:var(--text);border:1px solid var(--border);border-radius:8px;padding:.45rem 1rem;cursor:pointer;font-weight:600}
+.tabs button[aria-pressed=true],.tabs button.on{background:var(--gold);color:#fff;border-color:var(--gold)}
+.sum{display:flex;gap:2rem;flex-wrap:wrap;margin:1rem 0}
+.sum div{background:#fff;border:1px solid var(--border);border-radius:10px;padding:.8rem 1.2rem}
+.sum b{display:block;font-size:1.3rem;color:var(--gold)}
+.sum small{color:var(--muted);letter-spacing:1px;font-size:.7rem;font-weight:600}
+.explain{color:var(--muted);font-size:.85rem;margin-top:.5rem}
+.mood{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem}
+.mood div{background:#fff;border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:10px;padding:1rem;text-align:center}
+.mood b{font-size:1.15rem;display:block;color:var(--gold)}
+.mood small{color:var(--muted);letter-spacing:1px;font-weight:600;font-size:.7rem}
+.wl{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}
+.wl input{flex:1;min-width:180px;background:#fff;border:1px solid var(--border);border-radius:8px;color:var(--text);padding:.6rem}
+.chip{display:inline-flex;gap:.5rem;align-items:center;background:#E3F4F5;border-radius:20px;padding:.3rem .8rem;margin:.2rem;font-weight:600}
+.chip button{background:none;border:0;color:var(--red);cursor:pointer}
+.quiz button{display:block;width:100%;text-align:left;background:#fff;color:var(--text);border:1px solid var(--border);border-radius:10px;padding:.8rem 1rem;margin:.5rem 0;cursor:pointer}
+.quiz button:hover{border-color:var(--gold);background:#F1FAFA}
+.result{background:#F1FAFA;border:1px solid #BFE3E6;border-radius:10px;padding:1rem;margin-top:1rem}
+footer{background:#fff;border-top:1px solid var(--border);text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.85rem}
+footer a{color:var(--gold);margin:0 .8rem;text-decoration:none;font-weight:600}
+.fab{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:.6rem;z-index:900}
+.fab a{background:#25D366;color:#fff;text-decoration:none;padding:.7rem 1.1rem;border-radius:50px;font-weight:700;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.fab a.fb{background:var(--gold);color:#fff}
+dialog{background:#fff;color:var(--text);border:1px solid var(--border);border-radius:14px;padding:1.5rem;max-width:480px;width:92%;margin:auto}
+dialog::backdrop{background:rgba(20,20,50,.6)}
+dialog input{width:100%;background:#fff;border:1px solid var(--border);color:var(--text);padding:.7rem;border-radius:8px;margin:1rem 0}
+@media(max-width:768px){.links a:not(.hot){display:none}.links{gap:.6rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(prefers-reduced-motion:no-preference){.card{transition:transform .25s,box-shadow .25s}.card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(20,20,60,.12)}}
+
+.pane[hidden]{display:none}
+.pane select{min-width:160px;margin:.3rem .3rem .8rem 0}
+.pane ul{margin:.6rem 0 .6rem 1.2rem;color:var(--muted)}
+.pane .row{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin-bottom:.8rem}
+.pane .row input{background:#fff;border:1px solid var(--border);border-radius:8px;padding:.55rem;width:130px;color:var(--text)}
+#chart{width:100%;height:auto;background:#fff;border:1px solid var(--border);border-radius:10px;touch-action:none}
+.bar{height:10px;background:#D5ECEE;border-radius:10px;overflow:hidden;margin:.5rem 0}
+.bar i{display:block;height:100%;background:var(--gold);width:0;transition:width .4s}
+.les{background:#fff;border:1px solid var(--border);border-radius:10px;margin:.6rem 0;padding:.8rem 1rem}
+.les summary{font-weight:700;cursor:pointer;color:var(--gold)}
+.les button{display:block;width:100%;text-align:left;margin:.4rem 0;padding:.6rem .8rem;border:1px solid var(--border);border-radius:8px;background:#fff;cursor:pointer}
+.les.done summary::after{content:' ✅'}
+.bnav{display:none}
+@media(max-width:768px){
+ .bnav{display:flex;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--border);z-index:950;box-shadow:0 -2px 10px rgba(20,20,60,.08)}
+ .bnav a{flex:1;text-align:center;padding:.5rem 0;text-decoration:none;color:var(--muted);font-size:.68rem;font-weight:600;min-height:52px}
+ .bnav a span{display:block;font-size:1.2rem}
+ body{padding-bottom:64px}.fab{bottom:76px}
+ button,.btn,select,input{min-height:44px}
+ section{padding:2.5rem 1rem}
+}
+
+h1,h2,h3,.logo{font-family:var(--fh)}
+.strip{background:#0B1B2B}
+.hero{background:linear-gradient(180deg,#fff 0%,#EAF5F6 100%)}
+.card{border-left:1px solid var(--border);border-top:3px solid var(--gold);border-radius:16px}
+.grid .card:nth-child(n){border-left-color:var(--border)}
+.card::after{display:none}
+.wrap{border-radius:14px}
+.btn{border-radius:999px}.links .hot{border-radius:999px}.tag,.badge{border-radius:999px}
+/* scroll stories */
+.story{position:relative;height:320vh;background:#0B1B2B;color:#E8EEF3}
+.stage{position:sticky;top:0;height:100svh;display:grid;grid-template-columns:minmax(260px,1fr) 1.5fr;gap:3rem;align-items:center;padding:8rem 5vw 2rem;max-width:1300px;margin:0 auto}
+.stage .k{color:#3DD6C4;font-weight:700;letter-spacing:.14em;font-size:.75rem;text-transform:uppercase}
+.stage h2{color:#fff;font-size:clamp(2rem,4.5vw,3.4rem);margin:.6rem 0}
+.stage p{color:#9FB3C2;max-width:420px}
+.stage small{color:#7A93A6;display:block;margin-top:.6rem}
+.steps{display:flex;gap:.4rem;margin-top:1.5rem}.steps i{width:38px;height:4px;border-radius:4px;background:#23394D;transition:background .3s}.steps i.on{background:#3DD6C4}
+.panel{background:#0F2436;border:1px solid #1F384D;border-radius:20px;padding:1rem}
+.panel svg{width:100%;height:auto;display:block}
+.big{font-family:var(--fh);font-size:clamp(3.2rem,8vw,6.5rem);font-weight:700;color:#3DD6C4;line-height:1}
+.sbtn{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.2rem}
+.sbtn button{background:none;border:1px solid #2A4359;color:#9FB3C2;padding:.4rem .9rem;border-radius:999px;cursor:pointer}
+.sbtn button.on{background:#3DD6C4;color:#062B2A;border-color:#3DD6C4;font-weight:700}
+@media(max-width:800px){.stage{grid-template-columns:1fr;gap:1rem;padding-top:7rem;align-content:start}.story{height:300vh}}
+
+
+/* ===== Scroll-open intro: wordmark flies to the logo spot while the page opens ===== */
+.strip{position:fixed;top:0;left:0;right:0}nav{position:fixed;top:31px;left:0;right:0}
+.strip,nav{transition:opacity .25s}
+.openwrap{height:200vh;position:relative}
+.pinbox{position:sticky;top:0;height:100svh;overflow:hidden;z-index:900}
+.pinbox .hero{position:absolute;inset:0;min-height:0;padding:6.5rem 4vw 1.5rem;overflow:hidden;z-index:1;display:flex;flex-direction:column;justify-content:center}
+.ihalf{position:absolute;left:0;right:0;height:50.2%;z-index:3;will-change:transform}
+.ihalf.t{top:0;background:linear-gradient(180deg,#07121E,#0B1B2B)}.ihalf.b{bottom:0;background:linear-gradient(0deg,#07121E,#0B1B2B)}
+.imark{position:absolute;left:50%;top:50%;translate:-50% -50%;z-index:4;will-change:transform,opacity}
+.imark h1{font-family:var(--fh);font-size:clamp(2.2rem,9.5vw,8rem);font-weight:700;letter-spacing:.04em;color:#fff;line-height:1;white-space:nowrap;margin:0}
+.imark h1 span{display:inline-block;opacity:0;transform:translateY(30px);animation:il .7s cubic-bezier(.22,1,.36,1) forwards}
+.imark h1 .g{color:#3DD6C4}
+@keyframes il{to{opacity:1;transform:none}}
+.imark p{position:absolute;left:0;right:0;top:100%;text-align:center;color:#9FB3C2;letter-spacing:.4em;font-size:.8rem;font-weight:600;margin-top:1rem;opacity:0;animation:il .7s .9s forwards;white-space:nowrap}
+.ihint{position:absolute;bottom:2rem;left:0;right:0;text-align:center;color:#9FB3C2;font-size:.75rem;letter-spacing:.3em;z-index:5;font-weight:600}
+.ihint b{display:block;font-size:1.3rem;animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(6px)}}
+.iskip{position:absolute;top:1.2rem;right:1.2rem;z-index:6;background:none;border:1px solid #2A4359;color:#9FB3C2;padding:.4rem .9rem;border-radius:999px;cursor:pointer;font-size:.75rem}
+.ibar{position:absolute;left:0;top:0;height:3px;background:#3DD6C4;width:0;z-index:6}
+@media(max-height:760px){.pinbox .hero p{display:none}.pinbox .hero h1{margin:.5rem 0}.pinbox .ticker{margin:.8rem auto;padding:.7rem 1rem}.pinbox .live-gap{display:none}}
+@media(prefers-reduced-motion:reduce){.openwrap{height:auto}.pinbox{position:relative;height:auto;min-height:100svh}.pinbox .hero{position:relative;min-height:100svh}.ihalf,.imark,.ihint,.iskip,.ibar{display:none}}
+
+#ibg{position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none}
+.ihalf{z-index:2!important}
+@media(prefers-reduced-motion:reduce){#ibg{display:none}}
+
+.hbtns{display:flex;gap:.8rem;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:1.2rem}
+.hbtns .btn{width:auto;flex:0 0 auto;min-width:180px;padding:.8rem 1.8rem;font-size:.82rem;text-align:center;margin:0}
+@media(max-width:480px){.hbtns .btn{flex:1 1 100%;max-width:320px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="openwrap" id="intro">
+  <div class="pinbox">
+    <header class="hero">
+  <span class="badge"><span class="dot"></span> LIVE · AI-POWERED · TRANSPARENT</span>
+  <h1 class="grad" data-i="h1">India's Elite Trading Intelligence</h1>
+  <p data-i="sub">Real-time AI signals for Nifty 50, Next 50 &amp; Forex, with a public track record you can verify.</p>
+  <div class="ticker">
+    <div><b id="lp-nifty">--</b><small>NIFTY 50</small></div>
+    <div><b id="lp-bank" style="color:var(--gold)">--</b><small>BANK NIFTY</small></div>
+    <div><b id="lp-gold" style="color:var(--gold)">--</b><small>XAU/USD</small></div>
+    <div><b id="lp-time" style="color:var(--muted)">--:--:--</b><small>IST</small></div>
+  </div>
+  <div class="hbtns"><a class="btn main" href="#demo" data-i="cta1">TRY FREE DEMO</a><a class="btn" href="/login" data-i="cta2">ENTER TERMINAL</a></div>
+</header>
+    <div class="ihalf t" id="it"></div><div class="ihalf b" id="ib"></div>
+    <canvas id="ibg" aria-hidden="true"></canvas>
+    <div class="imark" id="im"><h1 id="imh" aria-label="GodStockss"><span class="g" style="animation-delay:0.00s">G</span><span class="g" style="animation-delay:0.08s">O</span><span class="g" style="animation-delay:0.16s">D</span><span class="" style="animation-delay:0.24s">S</span><span class="" style="animation-delay:0.32s">T</span><span class="" style="animation-delay:0.40s">O</span><span class="" style="animation-delay:0.48s">C</span><span class="" style="animation-delay:0.56s">K</span><span class="" style="animation-delay:0.64s">S</span><span class="" style="animation-delay:0.72s">S</span></h1><p id="isub">LIVE • PREDICT • PROFIT</p></div>
+    <div class="ihint" id="ih"><b>↓</b>SCROLL TO ENTER</div>
+    <button class="iskip" id="iskip">Skip intro</button><div class="ibar" id="ibar"></div>
+  </div>
+</div>
+
+
+
+<!-- Compact live strip (works on mobile too) -->
+<div class="strip" role="status" aria-label="Live market prices">
+  <span>NIFTY<b id="s-nifty">--</b></span><span>BANKNIFTY<b id="s-bank">--</b></span>
+  <span class="g">XAU/USD<b id="s-gold">--</b></span><span>EUR/USD<b id="s-eur">--</b></span>
+  <span>SENSEX<b id="s-sensex">--</b></span><span class="g">VIX<b id="s-vix">--</b></span>
+</div>
+
+<nav aria-label="Main">
+  <a class="logo" href="/"><i>GOD</i>STOCKSS</a>
+  <div class="links">
+    <a href="/market_insights" data-i="news">News</a><a href="/blogs">Blogs</a><a href="/store">Store</a>
+    <a href="#desk">Research</a><a href="#learn">Learn</a><a href="#history" data-i="record">Track Record</a><a href="/about">About</a><a href="/contact">Contact</a>
+    <a class="hot" href="/stock-wars">🏆 STOCK WARS</a>
+    <label class="sr" style="position:absolute;left:-999px" for="lang">Language</label>
+    <select id="lang"><option value="en">English</option><option value="hi">हिन्दी</option><option value="ta">தமிழ்</option></select>
+  </div>
+</nav>
+
+<main id="main">
+<section style="padding:1.5rem 1.25rem 0"><div class="note">⚠️ <strong>Educational platform only.</strong> GodStocks is not a SEBI-registered advisor. Signals are for learning, are not financial advice, and past performance does not guarantee future results. Trade at your own risk.</div></section>
+
+
+<!-- SUGGESTION 3: guided beginner path -->
+
+<div class="story" id="story1" aria-label="How a signal is detected"><div class="stage">
+  <div><span class="k" id="s1k">Step 1 · Observe</span><h2 id="s1t"></h2><p id="s1p"></p><div class="steps" id="s1s"><i></i><i></i><i></i><i></i></div></div>
+  <div class="panel"><svg id="sc" viewBox="0 0 800 340" role="img" aria-label="Illustrative candlestick chart with reversal point and expected move"></svg><small style="padding:0 .5rem .3rem">Illustrative chart with sample data. Not a real market or a trade recommendation.</small></div>
+</div></div>
+
+<div class="story" id="story2" aria-label="Markets covered" style="height:360vh"><div class="stage">
+  <div><span class="k">Markets covered</span><div class="big" id="s2n">50</div><h2 id="s2t">Nifty 50</h2><p id="s2p"></p>
+   <div class="sbtn" role="group" aria-label="Choose market"><button data-sm="0" class="on">Nifty 50</button><button data-sm="1">Next 50</button><button data-sm="2">Forex</button><button data-sm="3">MCX</button></div></div>
+  <div class="panel"><svg id="sdots" viewBox="0 0 800 340" role="img" aria-label="One dot per instrument tracked"></svg><small style="padding:0 .5rem .3rem">One dot per instrument tracked.</small></div>
+</div></div>
+
+<section id="demo">
+  <div class="center"><span class="tag">START HERE</span><h2 class="grad">Find Your Trading Path</h2>
+  <p class="sub">Answer one question and we'll point you to the right tools. No signup needed.</p></div>
+  <div class="card quiz" style="max-width:640px;margin:auto">
+    <p><strong>What best describes you?</strong></p>
+    <button data-p="beginner">🌱 I'm new to trading</button>
+    <button data-p="swing">📈 I trade Nifty / stocks regularly</button>
+    <button data-p="forex">💱 I trade Forex &amp; Gold</button>
+    <div class="result" id="quiz-result" hidden aria-live="polite"></div>
+  </div>
+  <div class="card" style="margin-top:1.2rem">
+    <h3>Jargon buster</h3>
+    <p><abbr tabindex="0" data-tip="The price level where the trend is likely to change direction.">Reversal Point</abbr> ·
+    <abbr tabindex="0" data-tip="How far price may move from the entry, based on recent volatility.">Expected Move</abbr> ·
+    <abbr tabindex="0" data-tip="A 0–100 score of how strongly indicators lean upward. Not a guarantee.">Bullish Score</abbr> ·
+    <abbr tabindex="0" data-tip="India VIX: the market's expected volatility. High = bigger swings.">VIX</abbr> ·
+    <abbr tabindex="0" data-tip="A stop-loss is a preset exit price that limits your loss on a trade.">Stop-loss</abbr></p>
+  </div>
+</section>
+
+<!-- SUGGESTION 5: market mood -->
+<section id="mood">
+  <div class="center"><span class="tag">MARKET MOOD</span><h2 class="grad">Today in 10 Seconds</h2></div>
+  <div class="mood" aria-live="polite">
+    <div><small>NIFTY BIAS</small><b id="m-bias">--</b></div>
+    <div><small>VIX</small><b id="m-vix">--</b></div>
+    <div><small>TOP BULLISH</small><b id="m-top">--</b></div>
+    <div><small>TOP BEARISH</small><b id="m-bot">--</b></div>
+  </div>
+  <p class="explain center" id="m-line"></p>
+</section>
+
+<!-- SUGGESTION 2: honest performance -->
+<section id="performance">
+  <div class="center"><span class="tag">LIVE PERFORMANCE</span><h2 class="grad">Today's Picks: Honest P&amp;L</h2></div>
+  <div class="tabs">
+    <button id="pt-nifty" class="on" data-tab="nifty">NIFTY 50</button>
+    <button id="pt-next50" data-tab="next50">NEXT 50</button>
+    <span style="margin-left:auto">View:</span>
+    <button id="mode-real" aria-pressed="true">Realistic (live price)</button>
+    <button id="mode-best" aria-pressed="false">Best-case (day high/low)</button>
+  </div>
+  <p class="explain" id="mode-note"></p>
+  <div id="perf-load" class="center" style="padding:2rem;color:var(--muted)">⟳ Loading live data…</div>
+  <div class="wrap"><table id="perf-table" hidden><caption class="sr" style="position:absolute;left:-999px">Signal performance</caption>
+    <thead><tr><th>STOCK</th><th>SIGNAL</th><th>ENTRY</th><th>TIME</th><th id="ref-h">LIVE</th><th>P&amp;L (1 SHARE)</th></tr></thead><tbody id="perf-body"></tbody></table></div>
+  <div class="sum" id="perf-sum" hidden>
+    <div><b id="p-total">--</b><small>TOTAL P&amp;L</small></div>
+    <div><b id="p-win">--</b><small>IN PROFIT</small></div>
+  </div>
+</section>
+
+<!-- SUGGESTION 1: signal history / track record -->
+<section id="history">
+  <div class="center"><span class="tag">TRANSPARENCY</span><h2 class="grad">Public Signal History</h2>
+  <p class="sub">Every signal is logged with entry, outcome and date, wins and losses together. No cherry-picking.</p></div>
+  <div class="sum" id="h-sum" hidden>
+    <div><b id="h-win">--</b><small>WIN RATE</small></div>
+    <div><b id="h-avg">--</b><small>AVG GAIN (WINS)</small></div>
+    <div><b id="h-loss">--</b><small>AVG LOSS (LOSSES)</small></div>
+    <div><b id="h-n">--</b><small>SIGNALS LOGGED</small></div>
+  </div>
+  <div class="wrap"><table id="h-table" hidden>
+    <thead><tr><th>DATE</th><th>STOCK</th><th>SIGNAL</th><th>ENTRY</th><th>EXIT</th><th>RESULT</th></tr></thead><tbody id="h-body"></tbody></table></div>
+  <p id="h-empty" class="center explain">Loading verified signal log…</p>
+  <p class="explain center">Reviews are shown only from verified accounts, and figures are never edited after the fact.</p>
+</section>
+
+<!-- SUGGESTION 5: watchlist + alerts -->
+<section id="watch">
+  <div class="center"><span class="tag">PERSONALIZE</span><h2 class="grad">Your Watchlist &amp; Alerts</h2>
+  <p class="sub">Follow the stocks you care about. Get alerts on Telegram or WhatsApp when a signal fires.</p></div>
+  <div class="card">
+    <form class="wl" id="wl-form"><label for="wl-in" style="position:absolute;left:-999px">Stock symbol</label>
+      <input id="wl-in" placeholder="e.g. RELIANCE, HDFCBANK" autocomplete="off"><button class="btn" style="margin:0">ADD</button></form>
+    <div id="wl-list"></div>
+    <div class="wrap"><table id="wl-table" hidden><thead><tr><th>SYMBOL</th><th>SIGNAL</th><th>LTP</th></tr></thead><tbody id="wl-body"></tbody></table></div>
+    <p style="margin-top:1rem"><label><input type="checkbox" id="alert-toggle"> Enable browser push alerts for my watchlist</label></p>
+    <p class="explain">Alert channels: <a href="https://t.me/godstocks" style="color:var(--gold)">Telegram</a> · <a href="https://chat.whatsapp.com/LS1PCdrZ3USHbBU7ehP81L" style="color:var(--gold)">WhatsApp</a></p>
+  </div>
+</section>
+
+
+<section id="desk">
+  <div class="center"><span class="tag">RESEARCH DESK</span><h2 class="grad">Understand Any Stock in Minutes</h2>
+  <p class="sub">AI insights, live charts, comparison, portfolio tracking and news summaries in one place.</p></div>
+  <div class="tabs" role="tablist" aria-label="Research tools">
+    <button class="on" role="tab" data-pane="insight">🤖 AI Insight</button><button role="tab" data-pane="chart">📈 Charts</button>
+    <button role="tab" data-pane="compare">⚖️ Compare</button><button role="tab" data-pane="portfolio">💼 Portfolio &amp; Alerts</button>
+    <button role="tab" data-pane="news">📰 News</button>
+  </div>
+  <div class="card pane" id="pane-insight">
+    <label for="sel-stock">Stock (today's AI picks)</label><br><select id="sel-stock"></select>
+    <label><input type="checkbox" id="beginner"> Explain like I'm new</label>
+    <div id="ins-out" aria-live="polite">Waiting for live signals…</div>
+    <p class="explain">AI-generated from live signal scores. Educational only, not financial advice.</p>
+  </div>
+  <div class="card pane" id="pane-chart" hidden>
+    <label for="ch-sel">Instrument</label><br>
+    <select id="ch-sel"><option value="nifty">Nifty 50</option><option value="bank">Bank Nifty</option><option value="gold">XAU/USD</option></select>
+    <svg id="chart" viewBox="0 0 640 260" role="img" aria-label="Live price chart"></svg>
+    <p id="ch-tip" class="explain" aria-live="polite">Hover or touch the chart to read values.</p>
+    <p id="ch-msg" class="explain">Live session chart: built from real prices as you keep this page open.</p>
+  </div>
+  <div class="card pane" id="pane-compare" hidden>
+    <select id="cmp-a" aria-label="Stock A"></select> <b>vs</b> <select id="cmp-b" aria-label="Stock B"></select>
+    <div class="wrap"><table style="min-width:420px"><thead><tr><th>METRIC</th><th id="ca-h">A</th><th id="cb-h">B</th></tr></thead><tbody id="cmp-body"></tbody></table></div>
+  </div>
+  <div class="card pane" id="pane-portfolio" hidden>
+    <h3>My Portfolio</h3>
+    <form class="row" id="pf-form"><input id="pf-sym" placeholder="Symbol" required aria-label="Symbol"><input id="pf-qty" type="number" min="1" placeholder="Qty" required aria-label="Quantity"><input id="pf-buy" type="number" step="0.01" placeholder="Buy price" required aria-label="Buy price"><input id="pf-cur" type="number" step="0.01" placeholder="Current (optional)" aria-label="Current price"><button class="btn main" style="margin:0">ADD</button></form>
+    <div class="wrap"><table style="min-width:560px"><thead><tr><th>STOCK</th><th>QTY</th><th>BUY</th><th>NOW</th><th>P&amp;L</th><th></th></tr></thead><tbody id="pf-body"></tbody></table></div>
+    <div class="sum" id="pf-sum"></div>
+    <h3>Price Alerts</h3>
+    <form class="row" id="pa-form"><input id="pa-sym" placeholder="Symbol" required aria-label="Alert symbol"><select id="pa-dir"><option value="above">rises above</option><option value="below">falls below</option></select><input id="pa-price" type="number" step="0.01" placeholder="Price" required aria-label="Alert price"><button class="btn main" style="margin:0">SET ALERT</button></form>
+    <div id="pa-list"></div><p id="pa-status" class="pos" aria-live="polite"></p>
+    <p class="explain">Live prices are auto-filled for today's AI-pick stocks. For others, enter the current price. Data stays on your device.</p>
+  </div>
+  <div class="card pane" id="pane-news" hidden>
+    <label for="news-sel">Stock</label><br><select id="news-sel"></select>
+    <div id="news-out">Choose a stock to see a summary of its latest news.</div>
+  </div>
+</section>
+
+<section id="learn">
+  <div class="center"><span class="tag">LEARN &amp; EARN XP</span><h2 class="grad">Trading Academy</h2>
+  <p class="sub">Short lessons, quick quizzes, XP and daily streaks. Build real skills before risking real money.</p></div>
+  <div class="card">
+    <div class="sum"><div><b id="ln-xp">0</b><small>XP</small></div><div><b id="ln-badge">Rookie</b><small>LEVEL</small></div><div><b id="ln-streak">0</b><small>DAY STREAK</small></div></div>
+    <div class="bar" role="progressbar" aria-label="Course progress"><i id="ln-bar"></i></div>
+    <div id="ln-list"></div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="center"><span class="tag">FEATURES</span><h2 class="grad">Everything You Need to Trade Smarter</h2></div>
+  <div class="grid" style="margin-top:2rem">
+    <div class="card"><div class="ico">⚡</div><h3>REAL-TIME SIGNALS</h3><p>AI scans Nifty 50 every few minutes and flags bullish or bearish patterns as they form.</p></div>
+    <div class="card"><div class="ico">📊</div><h3>ELITE TOP 5 PICKS</h3><p>Each morning the engine ranks the five highest-conviction stocks for the session.</p></div>
+    <div class="card"><div class="ico">📈</div><h3>LIVE INDEX TRACKING</h3><p>Nifty 50, Bank Nifty and Sensex with live price, change % and market bias.</p></div>
+    <div class="card"><div class="ico">💱</div><h3>FOREX &amp; MCX TERMINAL</h3><p>USD/INR, EUR/INR, Gold, Silver and Crude with live rates and signals.</p></div>
+    <div class="card"><div class="ico">🎯</div><h3>REVERSAL POINT &amp; EXPECTED MOVE</h3><p>Every signal carries calculated levels so you can plan a disciplined exit.</p></div>
+    <div class="card"><div class="ico">🤖</div><h3>AI MARKET CHATBOT</h3><p>Ask about any stock and get instant fundamental and technical context.</p></div>
+  </div>
+</section>
+
+<section id="refer" class="center">
+  <div class="card" style="max-width:700px;margin:auto">
+    <span class="tag">REFER &amp; EARN</span><h2 class="grad">Invite Friends, Earn Wallet Credit</h2>
+    <p class="sub">Each successful referral earns ₹15 in wallet credit, usable for tournament entry fees. <a href="/terms" style="color:var(--gold)">Terms apply</a>.</p>
+    <button class="btn main" id="ref-open">GENERATE MY INVITE LINK</button>
+  </div>
+</section>
+</main>
+
+<dialog id="ref-dlg" aria-labelledby="ref-h3">
+  <h3 id="ref-h3" style="color:var(--gold)">YOUR INVITE LINK</h3>
+  <input id="ref-link" readonly aria-label="Invite link">
+  <button class="btn main" id="ref-copy" style="margin:0">COPY</button>
+  <a class="btn" id="ref-wa" target="_blank" rel="noopener" style="margin:0 0 0 .5rem">WHATSAPP</a>
+  <button class="btn" id="ref-close" style="margin:.8rem 0 0;display:block">CLOSE</button>
+</dialog>
+
+<nav class="bnav" aria-label="Quick navigation"><a href="#main"><span>🏠</span>Home</a><a href="#performance"><span>📊</span>Signals</a><a href="#desk"><span>🔎</span>Research</a><a href="#watch"><span>⭐</span>Watch</a><a href="#learn"><span>🎓</span>Learn</a></nav>
+<div class="fab">
+  <a href="https://chat.whatsapp.com/LS1PCdrZ3USHbBU7ehP81L" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+  <a class="fb" href="/feedback">Feedback</a>
+</div>
+
+<footer>
+  <div>© 2026 GodStocks. Educational use only. Not a SEBI-registered investment advisor.</div>
+  <p style="margin-top:.8rem"><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/disclaimer">Disclaimer</a></p>
+</footer>
+
+<script>
+(()=>{
+const $=id=>document.getElementById(id);
+const inr=(n,d=2)=>Number(n).toLocaleString('en-IN',{minimumFractionDigits:d,maximumFractionDigits:d});
+const store={get(k,f){try{return JSON.parse(localStorage.getItem(k))??f}catch(e){return f}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* ---- i18n (Suggestion 5) ---- */
+const T={
+ en:{h1:"India's Elite Trading Intelligence",sub:"Real-time AI signals for Nifty 50, Next 50 & Forex, with a public track record you can verify.",cta1:"TRY FREE DEMO",cta2:"ENTER TERMINAL",news:"News",record:"Track Record"},
+ hi:{h1:"भारत की एलीट ट्रेडिंग इंटेलिजेंस",sub:"निफ्टी 50, नेक्स्ट 50 और फॉरेक्स के लिए रियल-टाइम AI सिग्नल, और सार्वजनिक ट्रैक रिकॉर्ड।",cta1:"फ्री डेमो देखें",cta2:"टर्मिनल खोलें",news:"समाचार",record:"ट्रैक रिकॉर्ड"},
+ ta:{h1:"இந்தியாவின் உயர்தர டிரேடிங் நுண்ணறிவு",sub:"நிஃப்டி 50, நெக்ஸ்ட் 50 மற்றும் ஃபாரெக்ஸிற்கான நேரடி AI சிக்னல்கள், வெளிப்படையான சாதனைப் பதிவுடன்.",cta1:"இலவச டெமோ",cta2:"டெர்மினல்",news:"செய்திகள்",record:"சாதனைப் பதிவு"}};
+function setLang(l){const d=T[l]||T.en;document.documentElement.lang=l;document.querySelectorAll('[data-i]').forEach(e=>{if(d[e.dataset.i])e.textContent=d[e.dataset.i]});store.set('gs_lang',l)}
+const L=store.get('gs_lang','en');$('lang').value=L;setLang(L);$('lang').onchange=e=>setLang(e.target.value);
+
+/* ---- clock ---- */
+const tick=()=>$('lp-time').textContent=new Date().toLocaleTimeString('en-IN',{hour12:false,timeZone:'Asia/Kolkata'});
+tick();setInterval(tick,1000);
+
+/* ---- live prices ---- */
+let LTP={};
+async function prices(){
+ try{const r=await fetch('/api/ltp');if(!r.ok)return;const d=await r.json();LTP=d;
+  const s=(id,v,f)=>{if(v)$(id).textContent=f(v)};
+  s('lp-nifty',d.nifty_ltp,v=>'₹'+inr(v));s('s-nifty',d.nifty_ltp,v=>inr(v));
+  s('lp-bank',d.banknifty_ltp,v=>'₹'+inr(v));s('s-bank',d.banknifty_ltp,v=>inr(v));
+  s('lp-gold',d.xauusd_ltp,v=>'$'+inr(v));s('s-gold',d.xauusd_ltp,v=>'$'+inr(v));
+  s('s-sensex',d.sensex_ltp,inr);s('s-vix',d.vix_ltp,inr);s('m-vix',d.vix_ltp,inr);
+  const e=d.prices&&d.prices['EURUSD=X'];if(e&&e.ltp>0)$('s-eur').textContent=Number(e.ltp).toFixed(4);
+  if(d.vix_ltp)$('m-line').textContent=d.vix_ltp>18?'Volatility is elevated. Expect wider swings and size positions carefully.':'Volatility is calm. Moves are likely to be steadier.';
+ }catch(e){}
+}
+prices();setInterval(prices,12000);
+
+/* ---- quiz (Suggestion 3) ---- */
+const paths={beginner:'Start with the Jargon buster above, then follow the Top 5 Picks in paper-trading mode. Focus on learning stop-losses before risking real money.',swing:'Head to the Terminal for Nifty 50 / Next 50 signals with Reversal Points and Expected Moves. Add your favourites to the watchlist below.',forex:'Open the Forex Terminal for XAU/USD, EUR/USD and USD/INR signals. Check the VIX and Market Mood before entering.'};
+document.querySelectorAll('.quiz [data-p]').forEach(b=>b.onclick=()=>{const r=$('quiz-result');r.hidden=false;r.innerHTML='<strong>Your path:</strong> '+paths[b.dataset.p]+' <a href="/login" style="color:var(--gold)">Enter Terminal →</a>';store.set('gs_path',b.dataset.p)});
+
+/* ---- data (Suggestion 2 + mood) ---- */
+let data={nifty:[],next50:[]},tab='nifty',mode='real';
+const sig=s=>{let x=String(s.signal||s.type||s.signal_type||'BULLISH').toUpperCase();if(x==='HOLD')x=(s.bullish_score>=s.bearish_score)?'BULLISH':'BEARISH';return x};
+function fmtTime(t){if(!t)return '--:--';if(/^\d{1,2}:\d{2}/.test(t)){let[h,m]=t.split(':');h=+h;return `${String(h%12||12).padStart(2,'0')}:${m} ${h>=12?'PM':'AM'}`}
+ const d=new Date(t);return isNaN(d)?'--:--':d.toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit',timeZone:'Asia/Kolkata'})}
+function render(){
+ const picks=data[tab]||[];const body=$('perf-body');
+ $('mode-note').textContent=mode==='real'?'Realistic: P&L uses the current live price versus entry. This is what you would see if you held the position now.':'Best-case: P&L uses the day\'s best price after entry (high for buys, low for sells). This is the maximum possible move, NOT what most traders would actually capture.';
+ $('ref-h').textContent=mode==='real'?'LIVE PRICE':'DAY HIGH / LOW';
+ if(!picks.length){$('perf-load').hidden=false;$('perf-load').textContent='No signals detected yet. The scanner is warming up.';$('perf-table').hidden=$('perf-sum').hidden=true;return}
+ let tot=0,win=0;
+ body.innerHTML=picks.map(s=>{const sg=sig(s),entry=+(s.detection_price||s.entry_price||s.ltp||0),ltp=+(s.ltp||entry);
+  let ref=ltp;if(mode==='best'){if(sg==='BULLISH'&&s.high)ref=Math.max(+s.high,ltp);if(sg==='BEARISH'&&s.low)ref=Math.min(+s.low,ltp)}
+  const pnl=sg==='BULLISH'?ref-entry:entry-ref,pct=entry>0?(pnl/entry*100).toFixed(2):'0.00';tot+=pnl;if(pnl>=0)win++;
+  return `<tr><td><strong>${esc(s.symbol)}</strong></td><td><span class="pill ${sg==='BULLISH'?'buy':'sell'}">${sg}</span></td><td>₹${inr(entry)}</td><td>${fmtTime(s.alert_time||s.timestamp||s.time)}</td><td>₹${inr(ref)}</td><td class="${pnl>=0?'pos':'neg'}">${pnl>=0?'▲ +':'▼ -'}₹${inr(Math.abs(pnl))} (${pct}%)</td></tr>`}).join('');
+ $('p-total').textContent=(tot>=0?'+':'-')+'₹'+inr(Math.abs(tot));$('p-total').className=tot>=0?'pos':'neg';
+ $('p-win').textContent=`${win}/${picks.length}`;
+ $('perf-load').hidden=true;$('perf-table').hidden=$('perf-sum').hidden=false;
+}
+async function loadData(){
+ try{const c=new AbortController(),t=setTimeout(()=>c.abort(),8000);
+  const r=await fetch('/api/data',{signal:c.signal});clearTimeout(t);if(!r.ok)throw 0;const d=await r.json();
+  const n=(d.nifty_top_5||d.nifty_alerts||d.nifty||[]).slice(0,5),x=(d.nn50_top_5||d.nn50_alerts||d.nn50||[]).slice(0,5);
+  const syms=[...n,...x].map(a=>a.symbol&&(a.symbol.endsWith('.NS')?a.symbol:a.symbol+'.NS')).filter(Boolean);
+  if(syms.length)try{const h=await fetch('/api/dayhl?symbols='+syms.join(','));if(h.ok){const hl=await h.json();[n,x].forEach(a=>a.forEach(s=>{const k=s.symbol.endsWith('.NS')?s.symbol:s.symbol+'.NS';if(hl[k]){s.high=hl[k].high;s.low=hl[k].low}}))}}catch(e){}
+  data={nifty:n,next50:x};render();mood(n.concat(x));window._all=n.concat(x);watchRender();
+ }catch(e){$('perf-load').textContent='⚠ Market data unavailable. Please refresh.'}
+}
+function mood(all){
+ if(!all.length)return;const b=all.filter(s=>sig(s)==='BULLISH').length,r=all.length-b;
+ $('m-bias').textContent=b>r?'BULLISH':b<r?'BEARISH':'NEUTRAL';$('m-bias').className=b>r?'pos':b<r?'neg':'';
+ const sc=(s,k)=>+s[k]||0,bull=[...all].sort((a,c)=>sc(c,'bullish_score')-sc(a,'bullish_score'))[0],bear=[...all].sort((a,c)=>sc(c,'bearish_score')-sc(a,'bearish_score'))[0];
+ $('m-top').textContent=bull?.symbol||'--';$('m-bot').textContent=bear?.symbol||'--';
+}
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{tab=b.dataset.tab;document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('on',x===b));render()});
+[['mode-real','real'],['mode-best','best']].forEach(([id,m])=>$(id).onclick=()=>{mode=m;$('mode-real').setAttribute('aria-pressed',m==='real');$('mode-best').setAttribute('aria-pressed',m==='best');render()});
+loadData();setInterval(loadData,30000);
+
+/* ---- signal history (Suggestion 1) : expects GET /api/signal-history ---- */
+async function history(){
+ try{const r=await fetch('/api/signal-history');if(!r.ok)throw 0;const d=await r.json();const rows=(d.signals||d||[]);if(!rows.length)throw 0;
+  const res=rows.map(s=>{const e=+s.entry,x=+s.exit,sg=String(s.signal).toUpperCase();return{...s,pct:e?((sg==='BULLISH'?x-e:e-x)/e*100):0}});
+  const w=res.filter(s=>s.pct>=0),l=res.filter(s=>s.pct<0),avg=a=>a.length?a.reduce((t,s)=>t+s.pct,0)/a.length:0;
+  $('h-win').textContent=Math.round(w.length/res.length*100)+'%';$('h-avg').textContent='+'+avg(w).toFixed(2)+'%';$('h-loss').textContent=avg(l).toFixed(2)+'%';$('h-n').textContent=res.length;
+  $('h-body').innerHTML=res.slice(0,30).map(s=>`<tr><td>${esc(s.date)}</td><td>${esc(s.symbol)}</td><td><span class="pill ${String(s.signal).toUpperCase()==='BULLISH'?'buy':'sell'}">${esc(String(s.signal).toUpperCase())}</span></td><td>₹${inr(s.entry)}</td><td>₹${inr(s.exit)}</td><td class="${s.pct>=0?'pos':'neg'}">${s.pct>=0?'+':''}${s.pct.toFixed(2)}%</td></tr>`).join('');
+  $('h-empty').hidden=true;$('h-table').hidden=$('h-sum').hidden=false;
+ }catch(e){$('h-empty').textContent='The verified signal log is being compiled and will appear here once available.'}
+}
+history();
+
+/* ---- watchlist + alerts (Suggestion 5) ---- */
+let wl=store.get('gs_watch',[]);
+function watchRender(){
+ $('wl-list').innerHTML=wl.map(s=>`<span class="chip">${esc(s)}<button aria-label="Remove ${esc(s)}" data-rm="${esc(s)}">✕</button></span>`).join('')||'<p class="explain">No stocks yet. Add one above.</p>';
+ const rows=wl.map(s=>{const m=(window._all||[]).find(x=>String(x.symbol).replace('.NS','')===s);return `<tr><td>${esc(s)}</td><td>${m?`<span class="pill ${sig(m)==='BULLISH'?'buy':'sell'}">${sig(m)}</span>`:'<span class="explain">No active signal</span>'}</td><td>${m&&m.ltp?'₹'+inr(m.ltp):'--'}</td></tr>`}).join('');
+ $('wl-body').innerHTML=rows;$('wl-table').hidden=!wl.length;
+}
+$('wl-form').onsubmit=e=>{e.preventDefault();const v=$('wl-in').value.toUpperCase().replace(/[^A-Z0-9&-]/g,'');if(v&&!wl.includes(v)&&wl.length<20){wl.push(v);store.set('gs_watch',wl);watchRender()}$('wl-in').value=''};
+$('wl-list').onclick=e=>{const s=e.target.dataset.rm;if(s){wl=wl.filter(x=>x!==s);store.set('gs_watch',wl);watchRender()}};
+$('alert-toggle').checked=store.get('gs_alerts',false)&&window.Notification&&Notification.permission==='granted';
+$('alert-toggle').onchange=async e=>{if(!e.target.checked){store.set('gs_alerts',false);return}
+ if(!('Notification' in window)){alert('Push alerts are not supported on this browser.');e.target.checked=false;return}
+ const p=await Notification.requestPermission();e.target.checked=p==='granted';store.set('gs_alerts',p==='granted')};
+let lastAlert={};
+setInterval(()=>{if(!store.get('gs_alerts',false)||Notification.permission!=='granted')return;
+ wl.forEach(s=>{const m=(window._all||[]).find(x=>String(x.symbol).replace('.NS','')===s);if(m&&lastAlert[s]!==sig(m)){if(lastAlert[s])new Notification('GodStocks: '+s,{body:sig(m)+' signal detected'});lastAlert[s]=sig(m)}})},30000);
+watchRender();
+
+/* ---- referral (server-issued code; no hardcoded link) ---- */
+const dlg=$('ref-dlg');
+$('ref-open').onclick=async()=>{
+ let code='';try{const r=await fetch('/api/referral',{headers:{Authorization:'Bearer '+(localStorage.getItem('godstocks_token')||'')}});if(r.ok)code=(await r.json()).code}catch(e){}
+ if(!code){location.href='/login?next=referral';return}
+ const link='https://godstockss.in/join?ref='+encodeURIComponent(code);$('ref-link').value=link;
+ $('ref-wa').href='https://api.whatsapp.com/send?text='+encodeURIComponent('Join GodStocks with my invite link: '+link);dlg.showModal()};
+$('ref-close').onclick=()=>dlg.close();
+$('ref-copy').onclick=async()=>{try{await navigator.clipboard.writeText($('ref-link').value);$('ref-copy').textContent='COPIED ✔'}catch(e){$('ref-link').select()}};
+
+/* ===== Research Desk ===== */
+const pool=()=>window._all||[];
+const bySym=x=>pool().find(s=>String(s.symbol).replace('.NS','')===String(x).toUpperCase());
+const nm=s=>String(s.symbol).replace('.NS','');
+const info=s=>{const sg=sig(s),b=+s.bullish_score||0,r=+s.bearish_score||0,e=+(s.detection_price||s.entry_price||s.ltp||0),l=+(s.ltp||e);return{sg,b,r,e,l,mv:e?(l-e)/e*100:0}};
+function fillSel(id){const el=$(id),c=el.value;el.innerHTML=pool().map(s=>`<option>${esc(nm(s))}</option>`).join('')||'<option value="">Loading…</option>';if(c)el.value=c}
+$('beginner').onchange=()=>renderInsight();
+function renderInsight(){
+ const s=bySym($('sel-stock').value);if(!s){$('ins-out').textContent='Waiting for live signals…';return}
+ const i=info(s),conv=Math.abs(i.b-i.r),st=conv>=40?'strong':conv>=20?'moderate':'mild',bull=i.sg==='BULLISH',aligned=bull?i.mv>=0:i.mv<=0;
+ $('ins-out').innerHTML=`<h3>${esc(nm(s))} <span class="pill ${bull?'buy':'sell'}">${i.sg}</span></h3><ul><li>Signal strength: <b>${st}</b> (bullish ${i.b} vs bearish ${i.r})</li><li>Signal price ₹${inr(i.e)}, now ₹${inr(i.l)} (${i.mv>=0?'+':''}${i.mv.toFixed(2)}%)</li><li>${aligned?'Price is moving in the direction of the signal.':'Price has moved against the signal. Re-check your stop-loss.'}</li></ul>`+
+ ($('beginner').checked?`<p class="result"><b>In simple words:</b> The AI weighs buying pressure against selling pressure. A ${bull?'bullish':'bearish'} signal means indicators lean ${bull?'upward':'downward'}. It is a probability, not a promise. Decide your exit price (stop-loss) before you enter any trade.</p>`:'');
+}
+$('sel-stock').onchange=renderInsight;
+
+/* chart from real polled prices */
+const H={nifty:[],bank:[],gold:[]};
+function snap(){const p={nifty:LTP.nifty_ltp,bank:LTP.banknifty_ltp,gold:LTP.xauusd_ltp};for(const k in p)if(+p[k]>0){H[k].push({t:Date.now(),v:+p[k]});if(H[k].length>150)H[k].shift()}drawChart()}
+function drawChart(){
+ const a=H[$('ch-sel').value],svg=$('chart');
+ if(a.length<2){svg.innerHTML='<text x="320" y="130" text-anchor="middle" fill="#5B6678">Collecting live data…</text>';return}
+ const v=a.map(x=>x.v),mn=Math.min(...v),mx=Math.max(...v),pad=(mx-mn)||1,X=i=>20+i*(600/(a.length-1)),Y=x=>230-((x-mn)/pad)*200;
+ const pts=a.map((x,i)=>X(i)+','+Y(x.v)).join(' '),up=v[v.length-1]>=v[0],c=up?'#0F8A4F':'#D32F2F';
+ svg.innerHTML=`<polygon points="20,230 ${pts} 620,230" fill="${c}" opacity=".12"/><polyline points="${pts}" fill="none" stroke="${c}" stroke-width="2.5"/><text x="20" y="20" fill="#5B6678" font-size="12">High ${inr(mx)}</text><text x="20" y="250" fill="#5B6678" font-size="12">Low ${inr(mn)}</text>`;
+}
+function hover(e){const a=H[$('ch-sel').value];if(a.length<2)return;const r=$('chart').getBoundingClientRect(),x=((e.touches?e.touches[0].clientX:e.clientX)-r.left)/r.width,p=a[Math.max(0,Math.min(a.length-1,Math.round(x*(a.length-1))))];$('ch-tip').textContent=new Date(p.t).toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata'})+' · '+inr(p.v)}
+$('chart').addEventListener('mousemove',hover);$('chart').addEventListener('touchmove',hover,{passive:true});$('ch-sel').onchange=drawChart;
+setInterval(snap,12000);setTimeout(snap,2500);
+
+/* compare */
+function renderCmp(){
+ const A=bySym($('cmp-a').value),B=bySym($('cmp-b').value);if(!A||!B){$('cmp-body').innerHTML='';return}
+ const a=info(A),b=info(B);$('ca-h').textContent=nm(A);$('cb-h').textContent=nm(B);
+ const row=(k,f)=>`<tr><td>${k}</td><td>${f(a)}</td><td>${f(b)}</td></tr>`;
+ $('cmp-body').innerHTML=row('Signal',x=>`<span class="pill ${x.sg==='BULLISH'?'buy':'sell'}">${x.sg}</span>`)+row('Signal price',x=>'₹'+inr(x.e))+row('Live price',x=>'₹'+inr(x.l))+row('Move since signal',x=>`<span class="${x.mv>=0?'pos':'neg'}">${x.mv>=0?'+':''}${x.mv.toFixed(2)}%</span>`)+row('Bullish score',x=>x.b)+row('Bearish score',x=>x.r)+row('Conviction',x=>Math.abs(x.b-x.r));
+}
+$('cmp-a').onchange=$('cmp-b').onchange=renderCmp;
+
+/* portfolio + price alerts */
+let port=store.get('gs_port',[]),pal=store.get('gs_pal',[]);
+function renderPort(){
+ let inv=0,val=0;
+ $('pf-body').innerHTML=port.map((h,i)=>{const m=bySym(h.s),cur=h.c>0?h.c:(m?+m.ltp:0),pnl=cur?(cur-h.b)*h.q:null;inv+=h.b*h.q;if(cur)val+=cur*h.q;else val+=h.b*h.q;
+  return `<tr><td>${esc(h.s)}</td><td>${h.q}</td><td>₹${inr(h.b)}</td><td>${cur?'₹'+inr(cur):'--'}</td><td class="${pnl>=0?'pos':'neg'}">${pnl===null?'--':(pnl>=0?'+':'-')+'₹'+inr(Math.abs(pnl))}</td><td><button data-rp="${i}" aria-label="Remove ${esc(h.s)}" style="border:0;background:none;color:var(--red);cursor:pointer">✕</button></td></tr>`}).join('')||'<tr><td colspan="6" class="explain">No holdings yet.</td></tr>';
+ const t=val-inv;$('pf-sum').innerHTML=port.length?`<div><b>₹${inr(inv)}</b><small>INVESTED</small></div><div><b>₹${inr(val)}</b><small>CURRENT VALUE</small></div><div><b class="${t>=0?'pos':'neg'}">${t>=0?'+':'-'}₹${inr(Math.abs(t))}</b><small>TOTAL P&amp;L</small></div>`:'';
+ $('pa-list').innerHTML=pal.map((a,i)=>`<span class="chip">${esc(a.s)} ${a.d} ₹${inr(a.p)}${a.done?' ✅':''}<button data-ra="${i}" aria-label="Remove alert">✕</button></span>`).join('');
+}
+$('pf-form').onsubmit=e=>{e.preventDefault();port.push({s:$('pf-sym').value.toUpperCase().replace(/[^A-Z0-9&-]/g,''),q:+$('pf-qty').value,b:+$('pf-buy').value,c:+$('pf-cur').value||0});store.set('gs_port',port);e.target.reset();renderPort()};
+$('pa-form').onsubmit=e=>{e.preventDefault();pal.push({s:$('pa-sym').value.toUpperCase().replace(/[^A-Z0-9&-]/g,''),d:$('pa-dir').value,p:+$('pa-price').value,done:false});store.set('gs_pal',pal);e.target.reset();renderPort()};
+$('pane-portfolio').onclick=e=>{const a=e.target.dataset;if(a.rp!==undefined){port.splice(+a.rp,1);store.set('gs_port',port)}if(a.ra!==undefined){pal.splice(+a.ra,1);store.set('gs_pal',pal)}renderPort()};
+setInterval(()=>{pal.forEach(a=>{const m=bySym(a.s);if(!m||a.done)return;const p=+m.ltp;if((a.d==='above'&&p>=a.p)||(a.d==='below'&&p<=a.p)){a.done=true;const msg=`${a.s} is ₹${inr(p)} (${a.d} ₹${inr(a.p)})`;$('pa-status').textContent='🔔 '+msg;if(window.Notification&&Notification.permission==='granted')new Notification('GodStocks alert',{body:msg})}});store.set('gs_pal',pal);renderPort()},15000);
+
+/* news */
+async function loadNews(){
+ const sym=$('news-sel').value;if(!sym)return;$('news-out').textContent='Loading…';
+ try{const r=await fetch('/api/news?symbol='+encodeURIComponent(sym));if(!r.ok)throw 0;const d=await r.json();
+  $('news-out').innerHTML=`<p class="result"><b>Summary:</b> ${esc(d.summary||'No summary available.')}</p><ul>`+(d.items||[]).slice(0,5).filter(n=>/^https?:/.test(n.url)).map(n=>`<li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a></li>`).join('')+'</ul>'}
+ catch(e){$('news-out').innerHTML='Per-stock news summaries are not available yet. See <a href="/market_insights" style="color:var(--gold)">Market News</a> for the latest headlines.'}
+}
+$('news-sel').onchange=loadNews;
+
+/* tabs + select population */
+document.querySelectorAll('[data-pane]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-pane]').forEach(x=>x.classList.toggle('on',x===b));document.querySelectorAll('.pane').forEach(p=>p.hidden=p.id!=='pane-'+b.dataset.pane);if(b.dataset.pane==='chart')drawChart();if(b.dataset.pane==='news')loadNews()});
+let plen=-1;setInterval(()=>{if(pool().length!==plen){plen=pool().length;['sel-stock','cmp-a','cmp-b','news-sel'].forEach(fillSel);if($('cmp-b').options.length>1)$('cmp-b').selectedIndex=1;renderInsight();renderCmp();renderPort()}},1500);
+renderPort();
+
+/* ===== Trading Academy (gamification) ===== */
+const LES=[
+ {t:'What is a stock?',x:'A stock is a small ownership share in a company.',q:'If a company earns more over time, its share price may…',o:['Rise','Always fall','Never change'],a:0},
+ {t:'Bullish vs Bearish',x:'Bullish means expecting prices to rise. Bearish means expecting them to fall.',q:'A bearish view expects prices to…',o:['Rise','Fall','Stay fixed'],a:1},
+ {t:'Stop-loss basics',x:'A stop-loss is a preset exit price that limits how much you can lose on a trade.',q:'When should you decide your stop-loss?',o:['After the price drops','Before you enter','Never'],a:1},
+ {t:'Nifty & VIX',x:'Nifty 50 tracks 50 large Indian companies. India VIX measures expected volatility.',q:'A high VIX suggests…',o:['Bigger price swings','Guaranteed profits','Markets are closed'],a:0},
+ {t:'Risk management',x:'Never risk more than a small share of your capital on a single trade.',q:'The safest way to size a trade is to…',o:['Risk a small % of capital','Use all your money','Copy a friend'],a:0}];
+let ln=store.get('gs_learn',{done:[],xp:0,streak:0,last:''});
+const today=()=>new Date().toISOString().slice(0,10);
+function bump(){const t=today();if(ln.last!==t){const y=new Date(Date.now()-864e5).toISOString().slice(0,10);ln.streak=ln.last===y?ln.streak+1:1;ln.last=t}}
+function renderLn(){
+ const lv=ln.xp>=100?'Pro Trader':ln.xp>=60?'Strategist':ln.xp>=20?'Analyst':'Rookie';
+ $('ln-xp').textContent=ln.xp;$('ln-badge').textContent=lv;$('ln-streak').textContent=ln.streak;$('ln-bar').style.width=ln.done.length/LES.length*100+'%';
+ $('ln-list').innerHTML=LES.map((l,i)=>`<details class="les ${ln.done.includes(i)?'done':''}"><summary>Lesson ${i+1}: ${l.t}</summary><p style="margin:.5rem 0">${l.x}</p><p><b>${l.q}</b></p>${l.o.map((o,j)=>`<button data-l="${i}" data-o="${j}">${o}</button>`).join('')}<p class="explain" id="lf-${i}" aria-live="polite"></p></details>`).join('');
+}
+$('ln-list').onclick=e=>{const b=e.target.closest('button[data-l]');if(!b)return;const i=+b.dataset.l,ok=+b.dataset.o===LES[i].a,f=document.getElementById('lf-'+i);
+ if(!ok){f.textContent='Not quite. Re-read the lesson and try again.';return}
+ if(!ln.done.includes(i)){ln.done.push(i);ln.xp+=20;bump();store.set('gs_learn',ln);renderLn();document.getElementById('lf-'+i).textContent='Correct! +20 XP';document.querySelectorAll('.les')[i].open=true}else f.textContent='Correct! (already completed)'};
+renderLn();
+
+/* ===== Scroll stories (own implementation) ===== */
+(()=>{
+const g=id=>document.getElementById(id),cl=(v,a,b)=>Math.max(a,Math.min(b,v)),rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const pr=el=>{const r=el.getBoundingClientRect();return rm?1:cl(-r.top/(r.height-innerHeight),0,1)};
+/* candles */
+let sd=11;const rn=()=>(sd=(sd*16807)%2147483647)/2147483647,NC=40,C=[];let pp=200;
+for(let i=0;i<NC;i++){const o=pp,c=o+(i<22?-2.2:3.2)+(rn()-.5)*9;C.push({o,c,h:Math.max(o,c)+rn()*6,l:Math.min(o,c)-rn()*6});pp=c}
+const mn=Math.min(...C.map(x=>x.l))-6,mx=Math.max(...C.map(x=>x.h))+6,Y=v=>310-(v-mn)/(mx-mn)*280,X=i=>30+i*19;
+let h='<line x1="0" y1="322" x2="800" y2="322" stroke="#23394D"/>';
+C.forEach((k,i)=>{const up=k.c>=k.o,col=up?'#22C58B':'#F0616D';h+=`<g class="cd" opacity="0"><line x1="${X(i)}" x2="${X(i)}" y1="${Y(k.h)}" y2="${Y(k.l)}" stroke="${col}"/><rect x="${X(i)-5}" y="${Y(Math.max(k.o,k.c))}" width="10" height="${Math.max(2,Math.abs(Y(k.o)-Y(k.c)))}" fill="${up?'none':col}" stroke="${col}"/></g>`});
+const rx=X(22),ry=Y(C[22].l),ex=X(NC-1),ey=Y(C[NC-1].c),tf="font:600 10px Inter,sans-serif;letter-spacing:.1em";
+h+=`<g id="rv" opacity="0"><circle cx="${rx}" cy="${ry}" r="9" fill="none" stroke="#3DD6C4" stroke-width="2"/><text x="${rx+14}" y="${ry+22}" fill="#3DD6C4" style="${tf}">REVERSAL POINT</text></g><g id="ex" opacity="0"><line x1="${rx}" y1="${ry}" x2="${ex+14}" y2="${ey}" stroke="#fff" stroke-dasharray="6 5"/><text x="${ex-125}" y="${ey-14}" fill="#fff" style="${tf}">EXPECTED MOVE</text></g>`;
+g('sc').innerHTML=h;const cd=[...g('sc').querySelectorAll('.cd')];
+const ST=[['Observe','Price forms candles','The engine reads every tick of price and volume across Nifty, Forex and MCX.'],['Score','Momentum is measured','Bullish and bearish scores are calculated as the trend develops.'],['Signal','A reversal point is flagged','When selling pressure fades, the AI marks the reversal point.'],['Plan','An expected move is projected','Every signal carries a target so you can plan your exit before you enter.']];
+function d1(){const n=Math.round(cl(pr(g('story1'))*1.1,0,1)*NC),s=n>=NC?3:n>=25?2:n>=10?1:0;
+ cd.forEach((c,i)=>c.setAttribute('opacity',i<n?1:0));g('rv').setAttribute('opacity',n>=25?1:0);g('ex').setAttribute('opacity',n>=NC?1:0);
+ g('s1k').textContent='Step '+(s+1)+' · '+ST[s][0];g('s1t').textContent=ST[s][1];g('s1p').textContent=ST[s][2];
+ g('s1s').querySelectorAll('i').forEach((e,i)=>e.classList.toggle('on',i<=s))}
+/* dots */
+const MK=[['Nifty 50',50,'50 large-cap Indian stocks scanned every few minutes.'],['Next 50',50,'50 mid-to-large-cap stocks with their own daily top picks.'],['Forex',8,'Major currency pairs and USD/INR with live rates.'],['MCX',3,'Gold, Silver and Crude Oil tracked with global cues.']];
+let di='',idx=0;const grp=[];MK.forEach((m,gi)=>{for(let i=0;i<m[1];i++){grp.push(gi);const c=idx%15,r=Math.floor(idx/15);di+=`<circle data-g="${gi}" cx="${40+c*50}" cy="${40+r*42}" r="9" fill="#23394D"/>`;idx++}});
+g('sdots').innerHTML=di;let cur=-1;
+function sm(i){if(i===cur)return;cur=i;g('sdots').querySelectorAll('circle').forEach(c=>c.setAttribute('fill',+c.dataset.g===i?'#3DD6C4':'#23394D'));
+ document.querySelectorAll('[data-sm]').forEach(b=>b.classList.toggle('on',+b.dataset.sm===i));g('s2n').textContent=MK[i][1];g('s2t').textContent=MK[i][0];g('s2p').textContent=MK[i][2]}
+document.querySelectorAll('[data-sm]').forEach(b=>b.onclick=()=>{const el=g('story2');scrollTo({top:el.offsetTop+(el.offsetHeight-innerHeight)*((+b.dataset.sm+.5)/4),behavior:rm?'auto':'smooth'})});
+let tk=false;const up=()=>{d1();sm(cl(Math.floor(pr(g('story2'))*4),0,3));tk=false};
+addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(up)}},{passive:true});addEventListener('resize',up);up();
+})();
+
+
+/* ===== Intro driver ===== */
+(()=>{
+const g=id=>document.getElementById(id),c=(v,a,b)=>Math.max(a,Math.min(b,v)),lp=(a,b,t)=>a+(b-a)*t;
+const it=g('it'),ib=g('ib'),im=g('im'),imh=g('imh'),sub=g('isub'),ih=g('ih'),bar=g('ibar'),strip=document.querySelector('.strip'),nav=document.querySelector('nav'),logo=nav.querySelector('.logo');
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function f(){
+ if(reduce){strip.style.opacity=nav.style.opacity=1;return}
+ const p=c(scrollY/innerHeight,0,1),e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;
+ const L=logo.getBoundingClientRect(),w0=imh.offsetWidth||1,ts=(L.width/w0)||.2;
+ const cx=innerWidth/2,cy=innerHeight/2,tx=L.left+L.width/2,ty=L.top+L.height/2;
+ const expand=.55*Math.sin(Math.PI*c(p*1.7,0,1))*(1-p);           /* grows first ... */
+ const sc=lp(1,ts,e)+expand;                                     /* ... while flying to the corner and shrinking to logo size */
+ im.style.transform=`translate(${(tx-cx)*e}px,${(ty-cy)*e}px) scale(${sc})`;
+ im.style.opacity=p>.9?c(1-(p-.9)/.1,0,1):1;
+ sub.style.opacity=c(1-p*4,0,1);ih.style.opacity=c(1-p*4,0,1);
+ const col=Math.round(lp(255,11,e)),col2=Math.round(lp(255,27,e)),col3=Math.round(lp(255,58,e));
+ imh.querySelectorAll('span:not(.g)').forEach(x=>x.style.color=`rgb(${col},${col2},${Math.round(lp(255,43,e))})`);
+ const q=c((p-.2)/.6,0,1),o=1-Math.pow(1-q,3);
+ it.style.transform=`translateY(${-o*101}%)`;ib.style.transform=`translateY(${o*101}%)`;
+ bar.style.width=p*100+'%';
+ const v=c((p-.88)/.12,0,1);strip.style.opacity=nav.style.opacity=v;strip.style.pointerEvents=nav.style.pointerEvents=v<.5?'none':'auto';
+}
+addEventListener('scroll',()=>requestAnimationFrame(f),{passive:true});addEventListener('resize',f);
+(document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(f);f();
+g('iskip').onclick=()=>scrollTo({top:innerHeight,behavior:'smooth'});
+})();
+
+/* ===== Intro background animation: live market scene that reacts to scroll ===== */
+(()=>{
+if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+const cv=document.getElementById('ibg'),ctx=cv.getContext('2d'),c=(v,a,b)=>Math.max(a,Math.min(b,v));
+let w,h,dpr;
+function rs(){dpr=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;cv.width=w*dpr;cv.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
+rs();addEventListener('resize',rs);
+let sd=5;const rn=()=>(sd=(sd*16807)%2147483647)/2147483647;
+const M=90,cl=[];let v=.35;for(let i=0;i<M;i++){v=c(v+(rn()-.42)*.11,.05,.95);cl.push(v)}
+const lo=Math.min(...cl),hi=Math.max(...cl),nz=cl.map(x=>(x-lo)/(hi-lo));
+const PT=Array.from({length:55},()=>({x:rn(),y:rn(),s:.2+rn()*.8,r:.6+rn()*1.6}));
+const LB=['NIFTY 50 ▲','BANK NIFTY ▲','XAU/USD ▼','EUR/USD ▲','SENSEX ▲','USD/INR ▼','CRUDE ▼','SILVER ▲'];
+function draw(now){
+ requestAnimationFrame(draw);
+ const t=now/1000,p=c(scrollY/innerHeight,0,1),a=1-c((p-.55)/.35,0,1);
+ ctx.clearRect(0,0,w,h);if(a<=0)return;
+ ctx.globalAlpha=a;
+ /* grid */
+ ctx.strokeStyle='rgba(61,214,196,.07)';ctx.lineWidth=1;ctx.beginPath();
+ for(let i=1;i<9;i++){const y=h*i/9;ctx.moveTo(0,y);ctx.lineTo(w,y)}
+ const off=(t*20*(1+p*4))%60;for(let x=-off;x<w;x+=60){ctx.moveTo(x,0);ctx.lineTo(x,h)}ctx.stroke();
+ /* expanding ring */
+ const R=p*Math.hypot(w,h)*.55+40*Math.sin(t*2)**2;ctx.strokeStyle=`rgba(61,214,196,${.28*(1-p)})`;ctx.lineWidth=2;ctx.beginPath();ctx.arc(w/2,h/2,R,0,7);ctx.stroke();
+ /* candles + price line, drawn left to right as you scroll */
+ const N=Math.max(18,Math.floor(w/24)),cw=w/N,rev=Math.max(p*1.2*N,Math.min(N*.4,t*9)),Y=q=>h*.74-q*h*.46*(1+p*.5);
+ let pts=[];
+ for(let i=0;i<N;i++){const f=c(rev-i,0,1);if(f<=0)break;
+  const k=Math.floor(i*M/N),o=nz[Math.max(0,k-1)],cc=nz[k],up=cc>=o,col=up?'34,197,139':'240,97,109',br=Math.sin(t*1.6+i*.6)*.015;
+  const x=i*cw+cw/2,yo=Y(o+br),yc=Y(cc+br),top=Math.min(yo,yc),bh=Math.max(3,Math.abs(yo-yc))*f;
+  ctx.strokeStyle=`rgba(${col},.55)`;ctx.fillStyle=`rgba(${col},.3)`;ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(x,top-8*f);ctx.lineTo(x,top+bh+8*f);ctx.stroke();ctx.fillRect(x-cw*.28,top,cw*.56,bh);ctx.strokeRect(x-cw*.28,top,cw*.56,bh);
+  pts.push([x,yc])}
+ if(pts.length>1){ctx.save();ctx.shadowColor='#3DD6C4';ctx.shadowBlur=14;ctx.strokeStyle='#3DD6C4';ctx.lineWidth=2.2;ctx.beginPath();pts.forEach((q,i)=>i?ctx.lineTo(q[0],q[1]):ctx.moveTo(q[0],q[1]));ctx.stroke();
+  const e=pts[pts.length-1];ctx.fillStyle='#3DD6C4';ctx.beginPath();ctx.arc(e[0],e[1],4+2*Math.sin(t*6),0,7);ctx.fill();ctx.restore()}
+ /* particles rising faster as you scroll */
+ ctx.fillStyle='rgba(255,255,255,.35)';
+ PT.forEach(q=>{q.y-=q.s*(.0006+p*.01);if(q.y<-.05)q.y=1.05;ctx.beginPath();ctx.arc(q.x*w,q.y*h,q.r,0,7);ctx.fill()});
+ /* drifting tickers */
+ ctx.font='600 12px "IBM Plex Mono",monospace';
+ LB.forEach((s,i)=>{const sp=(24+i*7)*(1+p*3),x=((i*w/LB.length-t*sp)%(w+240)+w+240)%(w+240)-120,y=h*(.12+.1*(i%4))+ (i%2?h*.62:0);
+  ctx.fillStyle=s.includes('▲')?'rgba(34,197,139,.5)':'rgba(240,97,109,.5)';ctx.fillText(s,x,y)});
+ ctx.globalAlpha=1;
+}
+requestAnimationFrame(draw);
+})();
+})();
+</script>
+</body>
+</html>
